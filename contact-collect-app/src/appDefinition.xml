@@ -1,0 +1,149 @@
+<appDefinition>
+   <id>contacts</id>
+   <version>1</version>
+   <name>Contacts</name>
+   <dateCreated class="java.sql.Timestamp">2015-12-10 09:49:55.0 GMT</dateCreated>
+   <dateModified class="java.sql.Timestamp">2015-12-10 22:50:06.0 GMT</dateModified>
+   <packageDefinitionList class="java.util.ArrayList">
+      <packageDefinition>
+         <appId>contacts</appId>
+         <id>contacts</id>
+         <version>1</version>
+         <name>Contacts</name>
+         <dateCreated class="java.sql.Timestamp">2015-12-10 09:49:55.0 GMT</dateCreated>
+         <dateModified class="java.sql.Timestamp">2015-12-10 09:49:55.0 GMT</dateModified>
+         <packageActivityFormMap class="java.util.HashMap">
+            <entry>
+               <string>collecting_process::runProcess</string>
+               <packageActivityForm>
+                  <processDefId>collecting_process</processDefId>
+                  <activityDefId>runProcess</activityDefId>
+                  <formId>base_ticket</formId>
+                  <type>SINGLE</type>
+                  <autoContinue>false</autoContinue>
+                  <!--disableSaveAsDraft>false</disableSaveAsDraft-->
+               </packageActivityForm>
+            </entry>
+            <entry>
+               <string>collecting_process::complete</string>
+               <packageActivityForm>
+                  <processDefId>collecting_process</processDefId>
+                  <activityDefId>complete</activityDefId>
+                  <formId>base_ticket</formId>
+                  <type>SINGLE</type>
+                  <autoContinue>false</autoContinue>
+                  <!--disableSaveAsDraft>false</disableSaveAsDraft-->
+               </packageActivityForm>
+            </entry>
+            <entry>
+               <string>collecting_process::start</string>
+               <packageActivityForm>
+                  <processDefId>collecting_process</processDefId>
+                  <activityDefId>start</activityDefId>
+                  <formId>base_ticket</formId>
+                  <type>SINGLE</type>
+                  <autoContinue>false</autoContinue>
+                  <!--disableSaveAsDraft>false</disableSaveAsDraft-->
+               </packageActivityForm>
+            </entry>
+         </packageActivityFormMap>
+         <packageActivityPluginMap class="java.util.HashMap"/>
+         <packageParticipantMap class="java.util.HashMap">
+            <entry>
+               <string>collecting_process::processStartWhiteList</string>
+               <packageParticipant>
+                  <processDefId>collecting_process</processDefId>
+                  <participantId>processStartWhiteList</participantId>
+                  <type>role</type>
+                  <value>loggedInUser</value>
+               </packageParticipant>
+            </entry>
+            <entry>
+               <string>collecting_process::participant2</string>
+               <packageParticipant>
+                  <processDefId>collecting_process</processDefId>
+                  <participantId>participant2</participantId>
+                  <type>user</type>
+                  <value>admin</value>
+               </packageParticipant>
+            </entry>
+            <entry>
+               <string>collecting_process::participant1</string>
+               <packageParticipant>
+                  <processDefId>collecting_process</processDefId>
+                  <participantId>participant1</participantId>
+                  <type>user</type>
+                  <value>admin</value>
+               </packageParticipant>
+            </entry>
+         </packageParticipantMap>
+      </packageDefinition>
+   </packageDefinitionList>
+   <formDefinitionList class="java.util.ArrayList">
+      <formDefinition>
+         <id>address_form</id>
+         <appId>contacts</appId>
+         <appVersion>1</appVersion>
+         <name>address_form</name>
+         <tableName>myapp_addresses</tableName>
+         <json>{&quot;className&quot;:&quot;org.joget.apps.form.model.Form&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;address_form&quot;,&quot;loadBinder&quot;:{&quot;className&quot;:&quot;org.joget.apps.form.lib.WorkflowFormBinder&quot;,&quot;properties&quot;:{}},&quot;description&quot;:&quot;&quot;,&quot;tableName&quot;:&quot;myapp_addresses&quot;,&quot;name&quot;:&quot;address_form&quot;,&quot;storeBinder&quot;:{&quot;className&quot;:&quot;org.joget.apps.form.lib.WorkflowFormBinder&quot;,&quot;properties&quot;:{}},&quot;permission&quot;:{&quot;className&quot;:&quot;&quot;,&quot;properties&quot;:{}},&quot;noPermissionMessage&quot;:&quot;&quot;},&quot;elements&quot;:[{&quot;elements&quot;:[{&quot;elements&quot;:[{&quot;className&quot;:&quot;org.joget.apps.form.lib.HiddenField&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;parent_id&quot;,&quot;workflowVariable&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;,&quot;useDefaultWhenEmpty&quot;:&quot;&quot;}},{&quot;className&quot;:&quot;org.joget.apps.form.lib.TextField&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;street&quot;,&quot;workflowVariable&quot;:&quot;&quot;,&quot;readonlyLabel&quot;:&quot;&quot;,&quot;maxlength&quot;:&quot;&quot;,&quot;encryption&quot;:&quot;&quot;,&quot;validator&quot;:{&quot;className&quot;:&quot;&quot;,&quot;properties&quot;:{}},&quot;value&quot;:&quot;&quot;,&quot;label&quot;:&quot;Street&quot;,&quot;readonly&quot;:&quot;&quot;,&quot;size&quot;:&quot;&quot;}},{&quot;className&quot;:&quot;org.joget.apps.form.lib.TextField&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;suburb&quot;,&quot;workflowVariable&quot;:&quot;&quot;,&quot;readonlyLabel&quot;:&quot;&quot;,&quot;maxlength&quot;:&quot;&quot;,&quot;encryption&quot;:&quot;&quot;,&quot;validator&quot;:{&quot;className&quot;:&quot;&quot;,&quot;properties&quot;:{}},&quot;value&quot;:&quot;&quot;,&quot;label&quot;:&quot;Suburb&quot;,&quot;readonly&quot;:&quot;&quot;,&quot;size&quot;:&quot;&quot;}},{&quot;className&quot;:&quot;org.joget.apps.form.lib.TextField&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;city&quot;,&quot;workflowVariable&quot;:&quot;&quot;,&quot;readonlyLabel&quot;:&quot;&quot;,&quot;maxlength&quot;:&quot;&quot;,&quot;encryption&quot;:&quot;&quot;,&quot;validator&quot;:{&quot;className&quot;:&quot;&quot;,&quot;properties&quot;:{}},&quot;value&quot;:&quot;&quot;,&quot;label&quot;:&quot;City&quot;,&quot;readonly&quot;:&quot;&quot;,&quot;size&quot;:&quot;&quot;}}],&quot;className&quot;:&quot;org.joget.apps.form.model.Column&quot;,&quot;properties&quot;:{&quot;width&quot;:&quot;100%&quot;}}],&quot;className&quot;:&quot;org.joget.apps.form.model.Section&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;section1&quot;,&quot;label&quot;:&quot;Section&quot;}}]}</json>
+         <dateCreated class="java.sql.Timestamp">2015-12-10 09:49:55.0 GMT</dateCreated>
+         <dateModified class="java.sql.Timestamp">2015-12-10 09:49:55.0 GMT</dateModified>
+      </formDefinition>
+      <formDefinition>
+         <id>base_ticket</id>
+         <appId>contacts</appId>
+         <appVersion>1</appVersion>
+         <name>base_ticket</name>
+         <tableName>myapp_base_ticket</tableName>
+         <json>{&quot;className&quot;:&quot;org.joget.apps.form.model.Form&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;base_ticket&quot;,&quot;loadBinder&quot;:{&quot;className&quot;:&quot;org.joget.apps.form.lib.WorkflowFormBinder&quot;},&quot;tableName&quot;:&quot;myapp_base_ticket&quot;,&quot;name&quot;:&quot;base_ticket&quot;,&quot;storeBinder&quot;:{&quot;className&quot;:&quot;org.joget.apps.form.lib.WorkflowFormBinder&quot;},&quot;elementUniqueKey&quot;:&quot;222023&quot;},&quot;elements&quot;:[{&quot;elements&quot;:[{&quot;elements&quot;:[{&quot;className&quot;:&quot;org.joget.apps.form.lib.IdGeneratorField&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;wflow_ref&quot;,&quot;workflowVariable&quot;:&quot;&quot;,&quot;hidden&quot;:&quot;&quot;,&quot;label&quot;:&quot;Ticket Id&quot;,&quot;format&quot;:&quot;TKT-???????&quot;,&quot;envVariable&quot;:&quot;counter&quot;}},{&quot;className&quot;:&quot;org.joget.apps.form.lib.TextField&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;fname&quot;,&quot;readonlyLabel&quot;:&quot;&quot;,&quot;workflowVariable&quot;:&quot;&quot;,&quot;maxlength&quot;:&quot;&quot;,&quot;encryption&quot;:&quot;&quot;,&quot;validator&quot;:{&quot;className&quot;:&quot;&quot;,&quot;properties&quot;:{}},&quot;value&quot;:&quot;&quot;,&quot;label&quot;:&quot;First name&quot;,&quot;readonly&quot;:&quot;&quot;,&quot;size&quot;:&quot;&quot;}},{&quot;className&quot;:&quot;org.joget.apps.form.lib.TextField&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;mname&quot;,&quot;readonlyLabel&quot;:&quot;&quot;,&quot;workflowVariable&quot;:&quot;&quot;,&quot;maxlength&quot;:&quot;&quot;,&quot;encryption&quot;:&quot;&quot;,&quot;validator&quot;:{&quot;className&quot;:&quot;&quot;,&quot;properties&quot;:{}},&quot;value&quot;:&quot;&quot;,&quot;label&quot;:&quot;Middle Name&quot;,&quot;readonly&quot;:&quot;&quot;,&quot;size&quot;:&quot;&quot;}},{&quot;className&quot;:&quot;org.joget.apps.form.lib.TextField&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;lname&quot;,&quot;readonlyLabel&quot;:&quot;&quot;,&quot;workflowVariable&quot;:&quot;&quot;,&quot;maxlength&quot;:&quot;&quot;,&quot;encryption&quot;:&quot;&quot;,&quot;validator&quot;:{&quot;className&quot;:&quot;&quot;,&quot;properties&quot;:{}},&quot;value&quot;:&quot;&quot;,&quot;label&quot;:&quot;Last name&quot;,&quot;readonly&quot;:&quot;&quot;,&quot;size&quot;:&quot;&quot;}},{&quot;className&quot;:&quot;org.joget.apps.form.lib.HiddenField&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;service_address_id&quot;,&quot;workflowVariable&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;,&quot;useDefaultWhenEmpty&quot;:&quot;&quot;}},{&quot;className&quot;:&quot;org.joget.apps.form.lib.HiddenField&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;billing_address_id&quot;,&quot;workflowVariable&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;,&quot;useDefaultWhenEmpty&quot;:&quot;&quot;}},{&quot;className&quot;:&quot;org.joget.apps.form.lib.HiddenField&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;alt_address_id&quot;,&quot;workflowVariable&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;,&quot;useDefaultWhenEmpty&quot;:&quot;&quot;}},{&quot;className&quot;:&quot;org.joget.plugin.enterprise.MultiPagedForm&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;addresses&quot;,&quot;nextButtonlabel&quot;:&quot;Next&quot;,&quot;prevButtonlabel&quot;:&quot;Prev&quot;,&quot;onlyAllowSubmitOnLastPage&quot;:&quot;&quot;,&quot;displayMode&quot;:&quot;tab&quot;,&quot;partiallyStore&quot;:&quot;&quot;,&quot;numberOfPage&quot;:{&quot;className&quot;:&quot;3&quot;,&quot;properties&quot;:{&quot;page1_formDefId&quot;:&quot;address_form&quot;,&quot;page2_label&quot;:&quot;Billing&quot;,&quot;page2_readonly&quot;:&quot;&quot;,&quot;page3_validate&quot;:&quot;true&quot;,&quot;page3_parentSubFormId&quot;:&quot;alt_address_id&quot;,&quot;page1_readonly&quot;:&quot;&quot;,&quot;page1_parentSubFormId&quot;:&quot;service_address_id&quot;,&quot;page2_validate&quot;:&quot;true&quot;,&quot;page2_subFormParentId&quot;:&quot;parent_id&quot;,&quot;page3_subFormParentId&quot;:&quot;parent_id&quot;,&quot;page2_formDefId&quot;:&quot;address_form&quot;,&quot;page3_readonly&quot;:&quot;&quot;,&quot;page3_formDefId&quot;:&quot;address_form&quot;,&quot;page3_label&quot;:&quot;Alternative&quot;,&quot;page2_parentSubFormId&quot;:&quot;billing_address_id&quot;,&quot;page1_subFormParentId&quot;:&quot;parent_id&quot;,&quot;page1_label&quot;:&quot;Service&quot;,&quot;page1_validate&quot;:&quot;true&quot;}},&quot;label&quot;:&quot;Addresses&quot;,&quot;css&quot;:&quot;&quot;}}],&quot;className&quot;:&quot;org.joget.apps.form.model.Column&quot;,&quot;properties&quot;:{&quot;width&quot;:&quot;100%&quot;}}],&quot;className&quot;:&quot;org.joget.apps.form.model.Section&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;section1&quot;,&quot;loadBinder&quot;:{&quot;className&quot;:&quot;&quot;,&quot;properties&quot;:{}},&quot;visibilityControl&quot;:&quot;&quot;,&quot;regex&quot;:&quot;&quot;,&quot;visibilityValue&quot;:&quot;&quot;,&quot;storeBinder&quot;:{&quot;className&quot;:&quot;&quot;,&quot;properties&quot;:{}},&quot;permission&quot;:{&quot;className&quot;:&quot;&quot;,&quot;properties&quot;:{}},&quot;label&quot;:&quot;&quot;}}]}</json>
+         <dateCreated class="java.sql.Timestamp">2015-12-10 09:49:55.0 GMT</dateCreated>
+         <dateModified class="java.sql.Timestamp">2015-12-10 09:49:55.0 GMT</dateModified>
+      </formDefinition>
+   </formDefinitionList>
+   <userviewDefinitionList class="java.util.ArrayList">
+      <userviewDefinition>
+         <id>myapp_portal</id>
+         <appId>contacts</appId>
+         <appVersion>1</appVersion>
+         <name>My App Web</name>
+         <description></description>
+         <json>{&quot;className&quot;:&quot;org.joget.apps.userview.model.Userview&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;myapp_portal&quot;,&quot;name&quot;:&quot;My App Web&quot;,&quot;description&quot;:&quot;&quot;,&quot;welcomeMessage&quot;:&quot;#date.EEE, d MMM yyyy#&quot;,&quot;logoutText&quot;:&quot;Logout&quot;,&quot;footerMessage&quot;:&quot;Powered by Joget&quot;},&quot;setting&quot;:{&quot;properties&quot;:{&quot;theme&quot;:{&quot;className&quot;:&quot;org.joget.plugin.enterprise.CorporatiTheme&quot;,&quot;properties&quot;:{&quot;colorScheme&quot;:&quot;green&quot;,&quot;cssUrl&quot;:&quot;&quot;,&quot;css&quot;:&quot;#main{\nwidth:85%;\n}\n#content{\nwidth:100%;\n}&quot;,&quot;js&quot;:&quot;&quot;,&quot;collapsibleMenu&quot;:&quot;true&quot;,&quot;customHeader&quot;:&quot;&quot;,&quot;customBanner&quot;:&quot;&quot;}},&quot;mobileViewDisabled&quot;:&quot;&quot;,&quot;permission&quot;:{&quot;className&quot;:&quot;org.joget.apps.userview.lib.LoggedInUserPermission&quot;,&quot;properties&quot;:{}},&quot;loginPageTop&quot;:&quot;&quot;,&quot;loginPageBottom&quot;:&quot;&quot;,&quot;mobileCacheEnabled&quot;:&quot;&quot;,&quot;mobileLoginRequired&quot;:&quot;&quot;,&quot;mobileViewBackgroundUrl&quot;:&quot;&quot;,&quot;mobileViewBackgroundColor&quot;:&quot;&quot;,&quot;mobileViewBackgroundStyle&quot;:&quot;repeat&quot;,&quot;mobileViewTranslucent&quot;:&quot;true&quot;,&quot;mobileViewLogoUrl&quot;:&quot;&quot;,&quot;mobileViewLogoWidth&quot;:&quot;&quot;,&quot;mobileViewLogoHeight&quot;:&quot;&quot;,&quot;mobileViewLogoAlign&quot;:&quot;left&quot;,&quot;mobileViewCustomCss&quot;:&quot;&quot;}},&quot;categories&quot;:[{&quot;className&quot;:&quot;org.joget.apps.userview.model.UserviewCategory&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;category-B53F0ADF67294C7DA627D47FA7BE8BF2&quot;,&quot;label&quot;:&quot;Public&quot;,&quot;hide&quot;:&quot;&quot;,&quot;permission&quot;:{&quot;className&quot;:&quot;org.joget.plugin.enterprise.AnonymousUserviewPermission&quot;,&quot;properties&quot;:{}}},&quot;menus&quot;:[{&quot;className&quot;:&quot;org.joget.apps.userview.lib.HtmlPage&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;83014A79E10A4B67A6AAFE3A78BF1F18&quot;,&quot;customId&quot;:&quot;&quot;,&quot;label&quot;:&quot;Not logged In&quot;,&quot;content&quot;:&quot;&lt;p style=\&quot;text-align: center;\&quot;&gt;&lt;span style=\&quot;font-size: x-large;\&quot;&gt;You should really log in...it&apos;s up there on the right&amp;nbsp;&lt;\/span&gt;&lt;\/p&gt;&quot;}}]},{&quot;className&quot;:&quot;org.joget.apps.userview.model.UserviewCategory&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;category-1FCEFDD665024AF998FFFFB1D6F2238B&quot;,&quot;label&quot;:&quot;Home&quot;,&quot;hide&quot;:&quot;yes&quot;,&quot;permission&quot;:{&quot;className&quot;:&quot;org.joget.apps.userview.lib.LoggedInUserPermission&quot;,&quot;properties&quot;:{}}},&quot;menus&quot;:[{&quot;className&quot;:&quot;org.joget.apps.userview.lib.HtmlPage&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;98600C3E429B4259A90A79382E5F7069&quot;,&quot;customId&quot;:&quot;home&quot;,&quot;label&quot;:&quot;Home&quot;,&quot;content&quot;:&quot;&lt;h1 style=\&quot;text-align: center;\&quot;&gt;&lt;span data-mce-mark=\&quot;1\&quot;&gt;Welcome&lt;\/span&gt;&lt;\/h1&gt;&quot;}}]},{&quot;className&quot;:&quot;org.joget.apps.userview.model.UserviewCategory&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;category-616138F20D0E4E28AC96350EBB844412&quot;,&quot;label&quot;:&quot;Secure&quot;,&quot;hide&quot;:&quot;&quot;,&quot;permission&quot;:{&quot;className&quot;:&quot;org.joget.apps.userview.lib.LoggedInUserPermission&quot;,&quot;properties&quot;:{}}},&quot;menus&quot;:[{&quot;className&quot;:&quot;org.joget.plugin.enterprise.DataListInboxMenu&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;9679143E95C2420D99EF2A0DFBC329D9&quot;,&quot;customId&quot;:&quot;contacts&quot;,&quot;label&quot;:&quot;Contacts&quot;,&quot;datalistId&quot;:&quot;contacts_list&quot;,&quot;appFilter&quot;:&quot;process&quot;,&quot;processId&quot;:&quot;collecting_process&quot;,&quot;rowCount&quot;:&quot;true&quot;,&quot;showDetail&quot;:&quot;true&quot;,&quot;list-customHeader&quot;:&quot;&quot;,&quot;list-customFooter&quot;:&quot;&quot;,&quot;assignment-customHeader&quot;:&quot;&quot;,&quot;assignment-customFooter&quot;:&quot;&quot;,&quot;keyName&quot;:&quot;contacts&quot;}},{&quot;className&quot;:&quot;org.joget.apps.userview.lib.RunProcess&quot;,&quot;properties&quot;:{&quot;id&quot;:&quot;9A1589B378E7448D91F85CCE3F18FC3F&quot;,&quot;customId&quot;:&quot;create_contact&quot;,&quot;label&quot;:&quot;Create&quot;,&quot;processDefId&quot;:&quot;collecting_process&quot;,&quot;runProcessDirectly&quot;:&quot;Yes&quot;,&quot;showInPopupDialog&quot;:&quot;&quot;,&quot;messageShowAfterComplete&quot;:&quot;&quot;,&quot;redirectUrlAfterComplete&quot;:&quot;contacts&quot;,&quot;keyName&quot;:&quot;home&quot;}}]}]}</json>
+         <dateCreated class="java.sql.Timestamp">2015-12-10 09:49:55.0 GMT</dateCreated>
+         <dateModified class="java.sql.Timestamp">2015-12-10 23:04:58.0 GMT</dateModified>
+      </userviewDefinition>
+   </userviewDefinitionList>
+   <datalistDefinitionList class="java.util.ArrayList">
+      <datalistDefinition>
+         <id>address_list</id>
+         <appId>contacts</appId>
+         <appVersion>1</appVersion>
+         <name>address_list</name>
+         <description>address_list</description>
+         <json>{&quot;id&quot;:&quot;address_list&quot;,&quot;name&quot;:&quot;address_list&quot;,&quot;pageSize&quot;:&quot;10&quot;,&quot;order&quot;:&quot;&quot;,&quot;orderBy&quot;:&quot;&quot;,&quot;showPageSizeSelector&quot;:&quot;true&quot;,&quot;pageSizeSelectorOptions&quot;:&quot;10,20,30,40,50,100&quot;,&quot;buttonPosition&quot;:&quot;bottomLeft&quot;,&quot;checkboxPosition&quot;:&quot;left&quot;,&quot;useSession&quot;:&quot;false&quot;,&quot;actions&quot;:[],&quot;rowActions&quot;:[],&quot;filters&quot;:[],&quot;binder&quot;:{&quot;className&quot;:&quot;org.joget.apps.datalist.lib.FormRowDataListBinder&quot;,&quot;properties&quot;:{&quot;formDefId&quot;:&quot;address_form&quot;,&quot;extraCondition&quot;:&quot;&quot;}},&quot;columns&quot;:[{&quot;id&quot;:&quot;column_2&quot;,&quot;label&quot;:&quot;ID&quot;,&quot;displayLabel&quot;:&quot;ID&quot;,&quot;name&quot;:&quot;id&quot;},{&quot;id&quot;:&quot;column_0&quot;,&quot;label&quot;:&quot;address_id&quot;,&quot;displayLabel&quot;:&quot;address_id&quot;,&quot;name&quot;:&quot;address_id&quot;},{&quot;id&quot;:&quot;column_1&quot;,&quot;label&quot;:&quot;Date Created&quot;,&quot;displayLabel&quot;:&quot;Date Created&quot;,&quot;name&quot;:&quot;dateCreated&quot;},{&quot;id&quot;:&quot;column_3&quot;,&quot;label&quot;:&quot;Street&quot;,&quot;displayLabel&quot;:&quot;Street&quot;,&quot;name&quot;:&quot;street&quot;},{&quot;id&quot;:&quot;column_4&quot;,&quot;label&quot;:&quot;Suburb&quot;,&quot;displayLabel&quot;:&quot;Suburb&quot;,&quot;name&quot;:&quot;suburb&quot;},{&quot;id&quot;:&quot;column_5&quot;,&quot;label&quot;:&quot;City&quot;,&quot;displayLabel&quot;:&quot;City&quot;,&quot;name&quot;:&quot;city&quot;}]}</json>
+         <dateCreated class="java.sql.Timestamp">2015-12-10 09:49:55.0 GMT</dateCreated>
+         <dateModified class="java.sql.Timestamp">2015-12-10 09:49:55.0 GMT</dateModified>
+      </datalistDefinition>
+      <datalistDefinition>
+         <id>contacts_list</id>
+         <appId>contacts</appId>
+         <appVersion>1</appVersion>
+         <name>contacts_list</name>
+         <description>contacts_list</description>
+         <json>{&quot;id&quot;:&quot;contacts_list&quot;,&quot;name&quot;:&quot;contacts_list&quot;,&quot;pageSize&quot;:&quot;20&quot;,&quot;order&quot;:&quot;1&quot;,&quot;orderBy&quot;:&quot;dateCreated&quot;,&quot;showPageSizeSelector&quot;:&quot;true&quot;,&quot;pageSizeSelectorOptions&quot;:&quot;10,20,30,40,50,100&quot;,&quot;buttonPosition&quot;:&quot;bottomLeft&quot;,&quot;checkboxPosition&quot;:&quot;left&quot;,&quot;useSession&quot;:&quot;false&quot;,&quot;rowActions&quot;:[],&quot;actions&quot;:[],&quot;filters&quot;:[],&quot;binder&quot;:{&quot;className&quot;:&quot;org.joget.plugin.enterprise.AdvancedFormRowDataListBinder&quot;,&quot;properties&quot;:{&quot;formDefId&quot;:&quot;base_ticket&quot;,&quot;filters&quot;:[],&quot;extraCondition&quot;:&quot;&quot;}},&quot;columns&quot;:[{&quot;id&quot;:&quot;column_0&quot;,&quot;label&quot;:&quot;Date Created&quot;,&quot;displayLabel&quot;:&quot;Date Created&quot;,&quot;name&quot;:&quot;dateCreated&quot;},{&quot;id&quot;:&quot;column_1&quot;,&quot;label&quot;:&quot;Date Modified&quot;,&quot;displayLabel&quot;:&quot;Date Modified&quot;,&quot;name&quot;:&quot;dateModified&quot;},{&quot;id&quot;:&quot;column_2&quot;,&quot;label&quot;:&quot;ID&quot;,&quot;displayLabel&quot;:&quot;ID&quot;,&quot;name&quot;:&quot;id&quot;},{&quot;id&quot;:&quot;column_3&quot;,&quot;label&quot;:&quot;Ticket Id&quot;,&quot;displayLabel&quot;:&quot;Ticket Id&quot;,&quot;name&quot;:&quot;wflow_ref&quot;},{&quot;id&quot;:&quot;column_4&quot;,&quot;label&quot;:&quot;First name&quot;,&quot;displayLabel&quot;:&quot;First name&quot;,&quot;name&quot;:&quot;fname&quot;},{&quot;id&quot;:&quot;column_6&quot;,&quot;label&quot;:&quot;Middle Name&quot;,&quot;displayLabel&quot;:&quot;Middle Name&quot;,&quot;name&quot;:&quot;mname&quot;},{&quot;id&quot;:&quot;column_5&quot;,&quot;label&quot;:&quot;Last name&quot;,&quot;displayLabel&quot;:&quot;Last name&quot;,&quot;name&quot;:&quot;lname&quot;}]}</json>
+         <dateCreated class="java.sql.Timestamp">2015-12-10 09:49:55.0 GMT</dateCreated>
+         <dateModified class="java.sql.Timestamp">2015-12-10 09:49:55.0 GMT</dateModified>
+      </datalistDefinition>
+   </datalistDefinitionList>
+   <pluginDefaultPropertiesList class="java.util.ArrayList"/>
+   <environmentVariableList class="java.util.ArrayList">
+      <environmentVariable>
+         <id>counter</id>
+         <appId>contacts</appId>
+         <appVersion>1</appVersion>
+         <value>5</value>
+      </environmentVariable>
+   </environmentVariableList>
+   <messageList class="java.util.ArrayList"/>
+   <license>hNI/8csm9/1tPpLwhKjQcs5y3r20CY/Kusnf9m1Ln8l0RGleGHXqXg==</license>
+</appDefinition>

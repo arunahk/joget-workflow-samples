@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://www.wfmc.org/2002/XPDL1.0" xmlns:xpdl="http://www.wfmc.org/2002/XPDL1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="contacts" Name="My First App" xsi:schemaLocation="http://www.wfmc.org/2002/XPDL1.0 http://wfmc.org/standards/docs/TC-1025_schema_10_xpdl.xsd">
+    <PackageHeader>
+        <XPDLVersion>1.0</XPDLVersion>
+        <Vendor/>
+        <Created/>
+    </PackageHeader>
+    <Script Type="text/javascript"/>
+    <Participants>
+        <Participant Id="participant1" Name="Participant 1">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="participant2" Name="Participant 2">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+    </Participants>
+    <WorkflowProcesses>
+        <WorkflowProcess Id="collecting_process" Name="Collect Data Process">
+            <ProcessHeader DurationUnit="h"/>
+            <Activities>
+                <Activity Id="start" Name="Start">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>participant1</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="participant1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="271,50"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="complete" Name="Complete">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>participant2</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="participant2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="368,44"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="start" Id="transition1" To="complete">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=participant2,CONNECTING_ACTIVITY_ID=complete,X_OFFSET=648,Y_OFFSET=77,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=participant1,CONNECTING_ACTIVITY_ID=start,X_OFFSET=89,Y_OFFSET=66,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="participant1;participant2"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+    </WorkflowProcesses>
+    <ExtendedAttributes>
+        <ExtendedAttribute Name="EDITING_TOOL" Value="Workflow Designer 4.0.25 - build 2427"/>
+        <ExtendedAttribute Name="EDITING_TOOL_VERSION" Value="2.0-2(4?)-C-20080227-0226"/>
+        <ExtendedAttribute Name="JaWE_CONFIGURATION" Value="default"/>
+    </ExtendedAttributes>
+</Package>
